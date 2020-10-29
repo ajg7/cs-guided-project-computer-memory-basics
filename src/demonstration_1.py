@@ -23,4 +23,12 @@ if there is a mathematical approach that you can take.*
 """
 def to_lower_case(string):
     # Your code here
+    arr = []
+    for letter in string:
+        converted = int(ord(letter))
+        if converted < 91:
+            converted += 32
+        arr.append(chr(converted))
+    return "".join(arr)
 
+print(to_lower_case("DARKNESS"))
